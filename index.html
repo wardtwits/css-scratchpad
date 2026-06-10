@@ -230,7 +230,18 @@
       line-height: 1.75;
       white-space: pre-wrap;
     }
-
+  .castlink img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+  }
+  .viisi img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+  }
     .code .selector {
       color: #19d3d3;
     }
@@ -350,52 +361,123 @@
       color: var(--cyan);
       font-weight: 900;
     }
+.author {
+  text-align: center;
+}
 
-    .author {
-      text-align: center;
-    }
+.author-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .author-card {
-      max-width: 820px;
-      margin: 24px auto 0;
-      padding: 18px;
-      border-radius: 30px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.06);
-      box-shadow: var(--shadow);
-    }
+.author-card {
+  max-width: 920px;
+  margin: 24px auto 0;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 24px;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+}
 
-    .author-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 22px;
-    }
+.author-image-link {
+  display: block;
+}
 
-    .footer {
-      margin-top: 36px;
-      color: rgba(184, 196, 220, 0.72);
-      text-align: center;
-      font-size: 0.92rem;
-    }
+.author-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
 
-    @media (max-width: 880px) {
-      .hero,
-      .privacy-panel {
-        grid-template-columns: 1fr;
-      }
+.other-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 100%;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background:white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.castlink {
+  display: flex;
 
-      .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  align-items: center;
 
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
+  justify-content: center;
+
+  width: 150px;
+
+  max-width: 100%;
+
+  padding: 0;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  text-decoration: none;
+}
+.viisi {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  max-width: 100%;
+
+  padding: 14px;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  text-decoration: none;
+
+}
+
+.viisi img {
+  display: block;
+  width: 80%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.other-works a:hover {
+  transform: translateY(-1px);
+}
 
     @media (max-width: 520px) {
+    .author-card {
+
+  grid-template-columns: 1fr;
+
+}
+
+.other-works {
+
+  min-height: auto;
+
+}
       .feature-grid {
         grid-template-columns: 1fr;
       }
@@ -537,17 +619,50 @@
       </div>
     </section>
 
-    <section class="section author">
-      <h2>About the author</h2>
-      <p class="section-intro" style="margin-left:auto; margin-right:auto;">
-        CSS Scratchpad was created by Chris Ward as a simple tool for developers and designers who want a faster way
-        to test page styling directly in the browser.
-      </p>
 
-      <div class="author-card">
-        <img src="images/author.png" alt="Illustration of Chris Ward working at a desk with a laptop, rocket, flowchart, and lightbulb." />
-      </div>
-    </section>
+
+<section class="section author">
+
+  <h2>About the author</h2>
+
+  <p class="section-intro author-intro">
+
+    CSS Scratchpad was created by Chris Ward as a simple tool for developers and designers who want a faster way
+
+    to test page styling directly in the browser.
+
+  </p>
+
+  <div class="author-card">
+
+    <a class="author-image-link" href="https://www.github.com/wardtwits" target="_blank" rel="noopener noreferrer">
+
+      <img src="images/author.png" alt="Illustration of Chris Ward working at a desk with a laptop, rocket, flowchart, and lightbulb." />
+
+    </a>
+
+    <div class="other-works">
+
+      <span>Other works by the author:</span>
+
+      <a class="viisi" href="https://viisi.app/" target="_blank" rel="noopener noreferrer">
+
+        <img src="images/ViisiLogo.png" alt="Viisi - A Satisfying Game" />
+
+      </a>
+
+      <a class="castlink" href="https://castlink.app/" target="_blank" rel="noopener noreferrer">
+
+        <img src="images/CastLinkLogo.png" alt="CastLink - Movie/TV Connections" />
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
 
     <footer class="footer">
       CSS Scratchpad — local CSS editing for development, testing, and visual debugging.
