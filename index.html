@@ -6,7 +6,7 @@
   <title>CSS Scratchpad</title>
   <meta
     name="description"
-    content="CSS Scratchpad is a lightweight Chrome extension for temporarily applying custom CSS to any webpage for development, testing, and visual debugging."
+    content="CSS Scratchpad is a lightweight Chrome extension with a floating style panel, element picker, and live edit mode for testing CSS directly on any webpage."
   />
    <link rel="stylesheet" href="css/main.css" />
    <style>
@@ -128,8 +128,8 @@ box-shadow: 1px 1px 6px rgba(18, 193, 199, 0.7);
         </h1>
 
         <p class="hero-copy">
-          CSS Scratchpad is a lightweight browser tool for temporarily applying custom CSS to the current webpage.
-          It is built for development, testing, visual debugging, and quick design experiments.
+          CSS Scratchpad is a lightweight Chrome extension that opens a floating style panel directly on the current webpage.
+          Write CSS, pick an element, inspect its styles, and live-edit selected components without touching source code.
         </p>
 
         <div class="actions">
@@ -139,29 +139,35 @@ box-shadow: 1px 1px 6px rgba(18, 193, 199, 0.7);
         </div>
       </div>
 
-      <aside class="mockup" aria-label="CSS Scratchpad code preview">
-        <div class="browser">
-          <div class="browser-bar">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="address">yourwebsite.com</span>
+      <aside class="mockup" aria-label="CSS Scratchpad floating panel preview">
+        <div class="scratchpad-preview">
+          <div class="scratchpad-titlebar">
+            <div class="scratchpad-title">
+              <img src="icons/action48.png" alt="" />
+              <span>CSS Scratchpad</span>
+              <span class="live-label">Live Edit Mode</span>
+            </div>
+            <button aria-label="Close preview">×</button>
           </div>
 
-          <pre class="code"><span class="comment">/* CSS Scratchpad */</span>
-<span class="selector">body</span> {
-  <span class="property">background</span>: <span class="value">#0d1117</span>;
-  <span class="property">color</span>: <span class="value">#e6edf3</span>;
-}
-
-<span class="selector">.hero-title</span> {
-  <span class="property">font-size</span>: <span class="value">clamp(3rem, 8vw, 6rem)</span>;
-  <span class="property">letter-spacing</span>: <span class="value">-0.06em</span>;
-}
-
-<span class="selector">.button</span> {
-  <span class="property">border-radius</span>: <span class="value">999px</span>;
+          <div class="scratchpad-body">
+            <pre class="scratchpad-code"><span class="selector">[data-css-scratchpad-selected="demo"]</span> {
+  <span class="property">background-color</span>: <span class="value">#050914</span>;
+  <span class="property">color</span>: <span class="value">#ffffff</span>;
+  <span class="property">border-radius</span>: <span class="value">24px</span>;
+  <span class="property">padding</span>: <span class="value">32px</span>;
+  <span class="property">box-shadow</span>: <span class="value">0 18px 50px rgba(0,0,0,.35)</span>;
 }</pre>
+
+            <div class="scratchpad-actions" aria-hidden="true">
+              <span class="primary-action">Apply</span>
+              <span class="btn-unapply">Unapply</span>
+              <span class="btn-clear">Clear</span>
+            </div>
+
+            <div class="pick-button" aria-hidden="true">Pick Element to Edit</div>
+            <div class="collapse-link">˄ Collapse</div>
+          </div>
         </div>
       </aside>
     </section>
@@ -169,33 +175,45 @@ box-shadow: 1px 1px 6px rgba(18, 193, 199, 0.7);
     <section id="features" class="section">
       <h2>Built for fast visual testing.</h2>
       <p class="section-intro">
-        Use CSS Scratchpad when you want to quickly test a style change, debug a layout issue,
-        or experiment with a page design without changing app files.
+        Use CSS Scratchpad when you want to test a style change, debug a layout issue,
+        extract useful styles from a selected element, or live-edit a page component without changing app files.
       </p>
 
       <div class="feature-grid">
         <article class="feature-card">
           <div class="feature-icon">⚡</div>
-          <h3>Instant preview</h3>
-          <p>Apply CSS to the active page and see the result immediately.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">&lt;/&gt;</div>
-          <h3>Write your CSS</h3>
-          <p>Paste or type custom CSS directly into the extension popup.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">💾</div>
-          <h3>Save locally</h3>
-          <p>Keep your CSS available in Chrome extension storage for reuse.</p>
+          <h3>Floating scratchpad</h3>
+          <p>Click the extension icon to open a draggable panel directly on the active page.</p>
         </article>
 
         <article class="feature-card">
           <div class="feature-icon">🎯</div>
-          <h3>Debug layouts</h3>
-          <p>Great for testing spacing, colors, typography, visibility, and responsive tweaks.</p>
+          <h3>Pick element to edit</h3>
+          <p>Select a page element with a visual highlight and pull its useful styles into the scratchpad.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✍️</div>
+          <h3>Live edit mode</h3>
+          <p>Edit selected element styles and apply them directly, so common changes work without adding !important.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">▾</div>
+          <h3>Collapse or close</h3>
+          <p>Keep the panel open while working, collapse it to the title bar, or close it with one click.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🛡</div>
+          <h3>Protected panel UI</h3>
+          <p>The scratchpad uses Shadow DOM, so the CSS you test on the page does not break the tool itself.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">💾</div>
+          <h3>Saved locally</h3>
+          <p>Your scratchpad CSS is stored locally in the browser for reuse on the page.</p>
         </article>
       </div>
     </section>
