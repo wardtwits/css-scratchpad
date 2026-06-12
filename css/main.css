@@ -206,7 +206,21 @@
       border-radius: 22px;
       overflow: hidden;
       border: 1px solid var(--border);
-      background: #050a14;
+      background: white;
+        background-image: radial-gradient(
+    circle at bottom left,
+    rgb(236, 64, 122, 0.3) 20%,
+    rgb(156, 204, 101, 0.2) 20%,
+    rgb(126, 87, 194, 0.3) 20%,
+    rgb(126, 87, 194, 0.3) 40%,
+    rgb(66, 165, 245, 0.4) 40%,
+    rgb(66, 165, 245, 0.4) 60%,
+    rgb(38, 166, 154, 0.5) 60%,
+    rgb(38, 166, 154, 0.5) 80%,
+    #9ccc65 40%
+  );
+      backdrop-filter: blur(20px); 
+     -webkit-backdrop-filter: blur(20px); 
     }
 
     .browser-bar {
