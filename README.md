@@ -2,6 +2,8 @@
 
 > A delightful Chrome extension for developers to test and live-edit CSS on any webpage without touching source code.
 
+**Note:** CSS Scratchpad is publicly visible for transparency, but it is not open source. Reuse of the code, branding, design, or assets is not permitted without written permission.
+
 [![Chrome Web Store](https://img.shields.io/badge/available%20on-Chrome%20Web%20Store-brightgreen)](https://chromewebstore.google.com/detail/jdnkfapcdcobhmbhhinhdlhfdgpoodgl?utm_source=item-share-cb)
 
 ## Features
@@ -15,17 +17,7 @@
 
 ## Getting Started
 
-### Installation
-
-1. Visit the [Chrome Web Store](https://chromewebstore.google.com/detail/jdnkfapcdcobhmbhhinhdlhfdgpoodgl?utm_source=item-share-cb)
-2. Click **Add to Chrome**
-3. The extension icon will appear in your toolbar
-
-### Quick Start
-
-1. Click the CSS Scratchpad icon in your Chrome toolbar
-2. A floating panel opens on the current page
-3. Write CSS rules or use **Pick Element to Edit** to select an element
+Visit the [CSS Scratchpad website](https://wardtwits.github.io/css-scratchpad) or the [Chrome Web Store](https://chromewebstore.google.com/detail/jdnkfapcdcobhmbhhinhdlhfdgpoodgl?utm_source=item-share-cb) to get started.
 
 ## Usage
 
@@ -78,9 +70,7 @@ Perfect for:
 - **Component Testing** - Live-edit a single component while the rest of the page stays unchanged
 - **Learning** - Experiment with CSS in real-time on live websites
 
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
 ├── manifest.json        # Chrome extension configuration
@@ -91,18 +81,6 @@ Perfect for:
 ├── icons/              # Extension icons
 └── images/             # Images for landing page
 ```
-
-### Build & Installation (Local)
-
-For development:
-1. Clone this repository
-2. Go to `chrome://extensions`
-3. Enable **Developer mode**
-4. Click **Load unpacked** and select this folder
-
-### Manifest Version
-
-Uses **Manifest V3** for Chrome extension compatibility.
 
 ## Privacy
 
@@ -142,7 +120,13 @@ Have questions or feedback? Reach out at **chris@viisi.app**
 
 ## License
 
-MIT License - See LICENSE file for details
+This repository is publicly visible for transparency and distribution of the CSS Scratchpad Chrome extension.
+
+CSS Scratchpad is **not an open-source project**.
+
+All source code, branding, design, copy, and assets are copyright © Chris Ward. All rights reserved.
+
+You may view the source code for personal reference, but you may not copy, redistribute, publish, sell, rebrand, package, or use this project or its assets to create a competing or derivative browser extension without written permission.
 
 ---
 
